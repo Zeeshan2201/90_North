@@ -1,0 +1,142 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% viewport height */
+}
+
+.navbar {
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  z-index: 999; /* Ensure navbar is on top of other elements */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1; /* Take up remaining space */
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 60px; /* Add margin to account for fixed navbar height */
+}
+
+.left-menu {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 200px; /* Adjust width as needed */
+  overflow-y: auto;
+  transition: width 0.3s ease-in-out; /* Add smooth transition */
+}
+
+.left-menu.collapsed {
+  width: 50px;
+}
+
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-menu li {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  flex-grow: 1; /* Take up remaining space */
+  padding: 20px;
+}
+
+.right-panel {
+  background-color: #f5f5f5;
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-link {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-content-image {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.right-panel-image {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* Media Queries (for responsiveness) */
+@media screen and (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 992px) {
+  .container {
+    width: 10%; /* 90% shrink */
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 700px) {
+  .container {
+    width: 20%; /* 80% shrink */
+  }
+}
+
+@media screen and (max-width: 700px) and (min-width: 600px) {
+  .container
